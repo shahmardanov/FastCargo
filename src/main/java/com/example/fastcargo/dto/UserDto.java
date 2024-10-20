@@ -1,7 +1,6 @@
 package com.example.fastcargo.dto;
 
 import com.example.fastcargo.role.Role;
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

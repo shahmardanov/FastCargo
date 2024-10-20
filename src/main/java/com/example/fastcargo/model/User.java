@@ -25,4 +25,12 @@ public class User {
     private String userEmail;
     private Role role;
     private String password;
+
+    public User(String userName, String userSurname, String userEmail, Role role, String password) {
+        this.userName = userName;
+        this.userSurname = userSurname;
+        this.userEmail = userEmail;
+        this.role = role;
+        this.password = password;
+    }
 }
