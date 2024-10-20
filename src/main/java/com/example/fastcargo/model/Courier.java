@@ -12,17 +12,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Courier {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userName;
-    private String userSurname;
-
     @Column(unique = true)
-    private String userEmail;
-    private Role role;
+    private String mail;
+    private String courierName;
+    private String courierSurname;
     private String password;
+    private Role role;
+
+
 }
