@@ -1,6 +1,7 @@
 package com.example.fastcargo.model;
 
 import com.example.fastcargo.role.Role;
+import com.example.fastcargo.status.CourierStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +25,6 @@ public class Courier {
     private String courierSurname;
     private String password;
     private Role role;
-
+    private CourierStatus courierStatus;
 
 }
