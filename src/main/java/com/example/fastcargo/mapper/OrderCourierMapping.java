@@ -9,6 +9,6 @@ import org.mapstruct.ReportingPolicy;
                                    unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface OrderCourierMapping {
 
-    SetOrderToCourierRequest convertToDto(Order order);
-    Order convertToEntity(SetOrderToCourierRequest request);
+    SetOrderToCourierRequest convertToEntity(Order order);
+    Order convertToDto(SetOrderToCourierRequest request);
 }

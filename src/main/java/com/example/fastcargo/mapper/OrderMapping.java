@@ -11,5 +11,6 @@ public interface OrderMapping {
 
     Order convertToDto(OrderRequest orderRequest);
 
-    OrderRequest convertToEntity(Order order);
+    OrderRequest convertToDto(Order order);
+    Order convertToEntity(OrderRequest orderRequest);
 }

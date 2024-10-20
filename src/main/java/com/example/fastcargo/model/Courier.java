@@ -27,4 +27,12 @@ public class Courier {
     private Role role;
     private CourierStatus courierStatus;
 
+    public Courier(String courierName, String courierSurname, String mail, Role role, CourierStatus courierStatus, String password) {
+        this.courierName = courierName;
+        this.courierSurname = courierSurname;
+        this.mail = mail;
+        this.role = role;
+        this.courierStatus = courierStatus;
+        this.password = password;
+    }
 }
