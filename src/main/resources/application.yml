@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:mysql://localhost/cargo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+  liquibase:
+    enabled: false
+
+server:
+  port: 8080
