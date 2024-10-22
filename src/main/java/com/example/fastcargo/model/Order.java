@@ -1,5 +1,6 @@
 package com.example.fastcargo.model;
 
+import com.example.fastcargo.status.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +20,25 @@ public class Order {
     private Long id;
     private String orderName;
     private String destination;
-    private String status;
-    private String courierName;
-    private String userName;
+    private Status status;
+    private String courierEmail;
+    private String userEmail;
 
+    public Order(String orderName, String courierName, String destination, String userEmail, Status status) {
+        this.orderName = orderName;
+        this.courierEmail = courierName;
+        this.destination = destination;
+        this.userEmail = userEmail;
+        this.status = status;
+    }
+
+    public Order(String orderName, String courierName, String destination, Status status, String userEmail) {
+        this(orderName, courierName, destination, userEmail, status);
+        this.status = status;
+    }
+
+    public Order(String orderName, String destination, Status status, String userEmail) {
+        this(orderName, null, destination, userEmail, status);
+        this.status = status;
+    }
 }

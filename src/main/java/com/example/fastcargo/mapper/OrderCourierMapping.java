@@ -10,5 +10,5 @@ import org.mapstruct.ReportingPolicy;
 public interface OrderCourierMapping {
 
     SetOrderToCourierRequest convertToEntity(Order order);
-    Order convertToDto(SetOrderToCourierRequest request);
+    Order convertToEntity(SetOrderToCourierRequest request);
 }

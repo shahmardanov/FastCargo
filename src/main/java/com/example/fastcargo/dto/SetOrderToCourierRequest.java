@@ -12,10 +12,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class SetOrderToCourierRequest {
 
-    private Long id;
-    private String name;
-    private String destination;
-    private Status status;
-    private String courierName;
-    private String userName;
+    private String courierEmail;
 }

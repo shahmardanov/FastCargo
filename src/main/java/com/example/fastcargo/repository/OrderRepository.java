@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    List<Order> findAllByUserName(String userName);
+    List<Order> findAllByUserEmail(String userName);
 
-    List<Order> findAllByCourierName(String courierName);
+    List<Order> findAllByCourierEmail(String courierName);
 
 }

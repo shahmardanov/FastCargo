@@ -1,5 +1,5 @@
 package com.example.fastcargo.status;
 
 public enum Status {
-    PLACED, SHIPPED, COMPLETED, CANCELED
+    PLACED, IN_THE_COURIER, COMPLETED, CANCELED
 }
