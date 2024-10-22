@@ -26,11 +26,18 @@ public class User {
     private Role role;
     private String password;
 
-    public User(String userName, String userSurname, String userEmail, Role role, String password) {
-        this.userName = userName;
-        this.userSurname = userSurname;
-        this.userEmail = userEmail;
+    public User(String firstName, String lastName, String mail, Role role, String password) {
+        this.userName = firstName;
+        this.userSurname = lastName;
+        this.userEmail = mail;
         this.role = role;
         this.password = password;
     }
+    public User(String firstName, String lastName, String mail, String password) {
+        this.userName = firstName;
+        this.userSurname = lastName;
+        this.userEmail = mail;
+        this.password = password;
+    }
+
 }
