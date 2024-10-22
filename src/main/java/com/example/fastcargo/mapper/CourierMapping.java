@@ -11,9 +11,8 @@ import java.util.List;
                                    unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface CourierMapping {
 
-    Courier convertToEntity (CourierDto courierDto);
-
     CourierDto convertToDto(Courier courier);
+
     List<CourierDto> convertToDtoAll(List<Courier> courier);
 
 }

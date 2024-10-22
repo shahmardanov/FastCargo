@@ -32,11 +32,6 @@ public class Order {
         this.status = status;
     }
 
-    public Order(String orderName, String courierName, String destination, Status status, String userEmail) {
-        this(orderName, courierName, destination, userEmail, status);
-        this.status = status;
-    }
-
     public Order(String orderName, String destination, Status status, String userEmail) {
         this(orderName, null, destination, userEmail, status);
         this.status = status;

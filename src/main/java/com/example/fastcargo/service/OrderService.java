@@ -1,7 +1,6 @@
 package com.example.fastcargo.service;
 
 import com.example.fastcargo.dto.*;
-import com.example.fastcargo.mapper.OrderCourierMapping;
 import com.example.fastcargo.mapper.OrderMapping;
 import com.example.fastcargo.model.Order;
 import com.example.fastcargo.repository.OrderRepository;
@@ -18,7 +17,6 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderMapping orderMapping;
     private final UserService userService;
-    private final OrderCourierMapping orderCourierMapping;
     private final CourierService courierService;
 
     public OrderRequest creatOrder(CreateOrderDto orderRequest) {
