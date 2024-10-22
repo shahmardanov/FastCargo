@@ -15,11 +15,11 @@ import java.util.Optional;
                                    unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface OrderMapping {
 
-    List<SetOrderToCourierRequest> convertToDto(List<Order> orders);
+    List<OrderRequest> convertToDto(List<Order> orders);
 
     List<OrderCourierDto>convertToDtoEmail(List<Order> courierEmail);
 
-    SetOrderToCourierRequest convertToDto(Order order);
+    OrderRequest convertToDto(Order order);
 
     Order convertToEntity(SetOrderToCourierRequest setOrderToCourierRequest);
 

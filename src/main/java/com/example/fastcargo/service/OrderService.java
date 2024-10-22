@@ -21,21 +21,21 @@ public class OrderService {
     private final OrderCourierMapping orderCourierMapping;
     private final CourierService courierService;
 
-    public SetOrderToCourierRequest creatOrder(OrderRequest orderRequest) {
-        userService.checkUser(orderRequest.getUserEmail());
+    public OrderRequest creatOrder(CreateOrderDto orderRequest) {
+        userService.checkUser(orderRequest.getUserMail());
         Order order = new Order(
                 orderRequest.getOrderName(),
-                orderRequest.getDestination(),
+                orderRequest.getAddress(),
                 Status.COMPLETED,
-                orderRequest.getUserEmail());
+                orderRequest.getUserMail());
         return orderMapping.convertToDto(orderRepository.save(order));
     }
 
-    public List<SetOrderToCourierRequest> getAllOrdersByUserEmail(String userEmail) {
+    public List<OrderRequest> getAllOrdersByUserEmail(String userEmail) {
         return orderMapping.convertToDto(orderRepository.findAllByUserEmail(userEmail));
     }
 
-    public SetOrderToCourierRequest updateOrderStatus(Long id, UpdateOrderDestination updateOrderDestination) {
+    public OrderRequest updateOrderStatus(Long id, UpdateOrderDestination updateOrderDestination) {
         Order order = findOrderById(id);
         order.setDestination(updateOrderDestination.getAddress());
         orderRepository.save(order);
@@ -50,6 +50,10 @@ public class OrderService {
     public void deleteOrderById(Long orderId) {
         findOrderById(orderId);
         orderRepository.deleteById(orderId);
+    }
+
+    public OrderRequest getOrderById(Long id){
+ return orderMapping.convertToDto(findOrderById(id));
     }
 
     public OrderCourierDto assignOrder(Long orderId, SetOrderToCourierRequest setOrderToCourierRequest) {
