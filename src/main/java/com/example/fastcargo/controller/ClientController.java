@@ -31,8 +31,4 @@ public class ClientController {
         return ResponseEntity.ok(userService.createApplicationAdmin(userRequest));
     }
 
-    @PostMapping("createCourier")
-    public ResponseEntity<CourierDto> createCourier(@RequestBody CourierRequest courierRequest) {
-        return ResponseEntity.ok(courierService.createCourier(courierRequest));
-    }
 }

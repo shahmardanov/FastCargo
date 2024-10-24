@@ -33,6 +33,10 @@ public class OrderService {
         return orderMapping.convertToDto(orderRepository.findAllByUserEmail(userEmail));
     }
 
+    public List<OrderRequest> getAllOrders() {
+        return orderMapping.convertToDto(orderRepository.findAll());
+    }
+
     public OrderRequest updateOrderStatus(Long id, UpdateOrderDestination updateOrderDestination) {
         Order order = findOrderById(id);
         order.setDestination(updateOrderDestination.getAddress());
@@ -50,8 +54,8 @@ public class OrderService {
         orderRepository.deleteById(orderId);
     }
 
-    public OrderRequest getOrderById(Long id){
- return orderMapping.convertToDto(findOrderById(id));
+    public OrderRequest getOrderById(Long id) {
+        return orderMapping.convertToDto(findOrderById(id));
     }
 
     public OrderCourierDto assignOrder(Long orderId, SetOrderToCourierRequest setOrderToCourierRequest) {
