@@ -14,8 +14,8 @@ import lombok.Setter;
 public class CourierDto {
 
     private String mail;
-    private String firstName;
-    private String lastName;
+    private String courierName;
+    private String courierSurname;
     private Role role;
-    private CourierStatus status;
+    private CourierStatus courierStatus;
 }
