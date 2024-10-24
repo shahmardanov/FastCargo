@@ -14,9 +14,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OrderCourierDto {
     private Long id;
-    private String name;
-    private String userMail;
     private String courierEmail;
-    private CourierStatus courierStatus;
     private Status status;
 }
